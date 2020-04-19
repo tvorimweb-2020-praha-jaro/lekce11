@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formuláře</title>
+    <link rel="stylesheet" href="styly.css">
+</head>
+<body>
+    <!-- Adresa pro zobrazení formuláře: https://pub.dvratil.cz/czechitas/zobraz.php //-->
+    <!-- Adresa pro odeslání emailu: https://pub.dvratil.cz/czechitas/mailer.php //-->
+
+    <form action="https://pub.dvratil.cz/czechitas/zobraz.php" method="POST">
+        <div>
+            <label for="nick">Jméno nebo přezdívka</label>
+            <input id="nick" type="text" name="nickname" required>
+        </div>
+        <input id="id" type="hidden" name="id" readonly value="87897">
+        <div>
+            <label for="telefon">Telefon</label>
+            <input id="telefon" type="text" name="phone" disabled>
+        </div>
+        <div>
+            <label for="email">E-mail</label>
+            <input id="email" type="email" name="email" required>
+        </div>
+        <label for="spam">
+            <input id="spam" type="checkbox" name="confirmation" value="ano" checked>
+            Chci dostávat spam
+        </label>
+        <div class="fieldset">
+            <label for="muz">
+                <input id="muz" type="radio" name="pohlavi" value="muž">
+                muž
+            </label>
+            <label for="zena">
+                <input id="zena" type="radio" name="pohlavi" value="žena">
+                žena
+            </label>
+        </div>
+        <label for="jazyk">Jazyky</label>
+        <select name="lang" id="jazyk">
+            <option value="en">anglicky</option>
+            <option value="cs">česky</option>
+            <option value="fr">francouzsky</option>
+            <option value="de">německy</option>
+            <option value="pl">polsky</option>
+            <option value="ru">rusky</option>
+        </select>
+        <label for="zivotopis">Něco o sobě</label>
+        <textarea name="bio" id="zivotopis" cols="30" rows="10" placeholder="Napiš pár slovy něco o sobě, ať se lépe poznáme…"></textarea>
+        <div>
+            <button>Odeslat</button>
+        </div>
+    </form>
+
+</body>
+</html>
