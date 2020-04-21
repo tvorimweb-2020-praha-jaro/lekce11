@@ -1,0 +1,116 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem #0080ff80;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.35rem;
+}
+
+textarea,
+select,
+fieldset,
+button,
+input {
+    padding: 0.35rem;
+    border: 1px solid silver;
+    border-radius: 0.15rem;
+    margin-bottom: 1.5rem;
+}
+
+input:invalid {
+    box-shadow: 0 0 0 0.2rem #ec363680;
+}
+
+.invalid-date {
+    display: none;
+    color: #ec3636;
+}
+
+input:invalid ~ .invalid-date {
+    display: inline;
+}
+
+input:read-only {
+    color: silver;
+    font-weight: 700;
+}
+
+.help {
+    display: inline-block;
+    width: auto;
+    padding: 1rem;
+    border: 2px solid #4f67ec;
+    border-radius: 0.15rem;
+}
+
+a {
+    position: relative;
+    padding-left: 1.35rem;
+    color: #4f67ec;
+    font-weight: 700;
+}
+
+[href="https://czechitas.cz"] {
+    color: hotpink;
+}
+
+a[href^="mailto:"]::before {
+    content: '🖂';
+}
+
+a[href^="tel:"]::before {
+    content: '📞';
+}
+
+/* odstraníme podtržení pod ikonou */
+a::before {
+    position: absolute;
+    left: 0;
+}
+
+.fieldset {
+    display: flex;
+    align-items: baseline;
+}
+
+.fieldset label{
+    margin: 0 0.5rem;
+}
+
+[for="jine"] {
+    display: flex;
+    align-items: baseline;
+}
+
+[name="jine-pohlavi"] {
+    display: none;
+    margin-left: 1rem;
+    margin-bottom: 0;
+}
+
+:checked ~ [name="jine-pohlavi"] {
+    display: block;
+}
+
+button {
+    background-color: cornflowerblue;
+    border-color: #4f67ec;
+    color: #fff;
+    font-weight: 700;
+}

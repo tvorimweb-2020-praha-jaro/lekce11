@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formuláře</title>
+    <link rel="stylesheet" href="styly.css">
+</head>
+<body>
+    <!-- horká linka: 800 999 008 📞 -->
+    <!-- kontaktní e-mail: pomozte@formulare.cz 🖂 -->
+
+    <form action="https://pub.dvratil.cz/czechitas/zobraz.php" method="POST">
+        <p class="help">Nevíte si rady s vyplněním formuláře? Nevadí, zavolejte nám na <a href="tel:420800999008">naši horkou linku</a>, nebo <a href="mailto:pomozte@formulare.cz">napište email</a>.</p>
+        <div>
+            <label for="nick">Jméno nebo přezdívka</label>
+            <input id="nick" type="text" name="nickname" required>
+        </div>
+        <input id="id" type="hidden" name="id" readonly value="87897">
+        <div>
+            <label for="telefon">Telefon</label>
+            <input id="telefon" type="text" name="phone" disabled>
+        </div>
+        <div>
+            <label for="email">E-mail</label>
+            <input id="email" type="email" name="email" required>
+        </div>
+        <div>
+            <label for="narozky">Narozeniny</label>
+            <input id="narozky" min="1970-04-01" max="2002-04-01" type="date" name="birthdate">
+            <small class="invalid-date">Datum musí být v rozmezí 1. dubna 1970 až 1. dubna 2002 včetně.</small>
+        </div>
+        <label for="spam">
+            <input id="spam" type="checkbox" name="confirmation" value="ano" checked>
+            Chci dostávat spam (<a href="http://whynot.website/">5 důvodů, proč chtít dostávat spam</a>)
+        </label>
+        <fieldset>
+            <legend>Pohlaví</legend>
+            <div class="fieldset">
+                <label for="muz">
+                    <input id="muz" type="radio" name="pohlavi" value="muž">
+                    muž
+                </label>
+                <label for="zena">
+                    <input id="zena" type="radio" name="pohlavi" value="žena">
+                    žena
+                </label>
+                <label for="jine">
+                    <input id="jine" type="radio" name="pohlavi" value="jiné">
+                    jiné
+                    <input type="text" name="jine-pohlavi" placeholder="uveďte">
+                </label>
+            </div>
+        </fieldset>
+        <label for="jazyk">Jazyky</label>
+        <select name="lang" id="jazyk">
+            <option value="en">anglicky</option>
+            <option value="cs">česky</option>
+            <option value="fr">francouzsky</option>
+            <option value="de">německy</option>
+            <option value="pl">polsky</option>
+            <option value="ru">rusky</option>
+        </select>
+        <label for="zivotopis">Něco o sobě</label>
+        <textarea name="bio" id="zivotopis" cols="30" rows="10" placeholder="Napiš pár slovy něco o sobě, ať se lépe poznáme…"></textarea>
+        <div>
+            <button>Odeslat</button>
+        </div>
+    </form>
+    <footer><small>Vytvořeno pro <a href="https://czechitas.cz">Czechitas</a>, konkrétně pro kurz <a href="https://www.facebook.com/groups/631002041060434/">Tvořím web A–Z</a></small></footer>
+</body>
+</html>
