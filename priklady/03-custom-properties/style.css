@@ -5,4 +5,14 @@
 	--primary-color: #b40000;
 	--secondary-color: #006c6c;
 	--tertiary-color: #70a800;
+
+	1. vytvoř tlačítka tří barev, každé tlačítko má shodnou
+		- barvu písma,
+		- barvu ohraničení
+	2. zaobli rohy
+	3. odstraň podtržení
+
+	4. přidej styl pro hover a focus:
+		- bílé písmo
+		- pozadí v barvě tlačítka
 */
